@@ -1,4 +1,4 @@
-# Android-MCP
+# android mcp
 
 - [Introduction](#Introduction)
 - [Setup](#Setup)
