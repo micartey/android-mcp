@@ -1,0 +1,10 @@
+*.iso
+*.qcow2
+*.apk
+venv
+.venv
+
+build
+node_modules
+*_dump.xml
+screenshot*
