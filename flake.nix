@@ -18,6 +18,18 @@
         };
       in
       {
+        devShells.mcp = pkgs.mkShell {
+          buildInputs = with pkgs; [
+            nodejs
+            bun
+          ];
+
+          shellHook = ''
+            bun run build
+            bun run start
+          '';
+        };
+
         devShells.default = pkgs.mkShell rec {
           buildInputs = with pkgs; [
             just

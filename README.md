@@ -1,11 +1,39 @@
 # Android-MCP
 
-<div align="center">
-  <img src="https://img.shields.io/badge/Android-3DDC84?style=for-the-badge&logo=android&logoColor=white" />
-  <img src="https://img.shields.io/badge/NIXOS-5277C3.svg?style=for-the-badge&logo=NixOS&logoColor=white" />
-</div>
+- [Introduction](#Introduction)
+- [Setup](#Setup)
+- [Virtualization](#Virtualization)
+  - [Usage](#Usage)
+
+## Introduction
+
+This repository is a proof-of-concept to drive an android phone via `adb` using the mcp protocol.
+
+- Analyze UI components
+- Take screenshot
+- Type text
+- Touch and Swipe input
+- Launch apps
+- Sleep
 
 ## Setup
+
+The setup is fairly easy given you have already an connected device and created an `adb` session.
+
+```bash
+nix develop .#mcp
+```
+
+Afterward, you have to configure the mcp server in your tool of choice.
+It needs to support **SSE** as the endpoint will be exposed to:
+
+```
+http://localhost:3134/sse
+```
+
+## Virtualization
+
+In case you want to use a VM instead of an actual android device, you need to start with creating one
 
 1. First we need to create a `qcow2` image for our vm to boot later.
 This needs to be done with the following command
@@ -40,20 +68,20 @@ Select the `qcow2` image as your drive.
   </div>
 </details>
 
+5. Enable Debug Mode so that the device can communicate with adb
+
 Now you can stop the VM.
 
-## Usage
+### Usage
 
-To use your mcp server, you simply need to execute:
-
-```bash
-nix develop
-```
-
-This will open a remote mcp server via sse on `http://localhost:3134/sse`
-
-**Make sure to start beforehand:**
+First you want to start the VM
 
 ```bash
 just vm-silent
+```
+
+Then you will need to run a slightly different command as this will also take care of connecting via adb
+
+```bash
+nix develop
 ```
