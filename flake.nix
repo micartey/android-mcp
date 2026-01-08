@@ -22,9 +22,12 @@
           buildInputs = with pkgs; [
             nodejs
             bun
+
+            android-tools
           ];
 
           shellHook = ''
+            bun install
             bun run build
             bun run start
           '';
@@ -55,9 +58,9 @@
             # Make sure the vm is already started
             # sleep 10;
 
-            adb connect localhost:5555
-            bun run build
-            bun run start
+            # adb connect localhost:5555
+            # bun run build
+            # bun run start
           '';
         };
       }

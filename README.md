@@ -14,7 +14,8 @@ This repository is a proof-of-concept to drive an android phone via `adb` using 
 - Type text
 - Touch and Swipe input
 - Launch apps
-- Sleep
+
+> Preview: https://cdn.micartey.dev/preview/video/aHR0cHM6Ly9jZG4ubWljYXJ0ZXkuZGV2L2FwaS92MS9zdHJlYW0vYmxvYi9BbmRyb2lkTUNQLm1vdg==
 
 ## Setup
 
