@@ -7,6 +7,13 @@
 
 ## Introduction
 
+> [!NOTE]  
+> Preview:
+> Here we go to X.com and fetch the newest dumb shit musk posted:
+> 
+> https://cdn.micartey.dev/preview/video/aHR0cHM6Ly9jZG4ubWljYXJ0ZXkuZGV2L2FwaS92MS9zdHJlYW0vYmxvYi9BbmRyb2lkTUNQLm1vdg==
+
+
 This repository is a proof-of-concept to drive an android phone via `adb` using the mcp protocol.
 
 - Analyze UI components
@@ -14,8 +21,6 @@ This repository is a proof-of-concept to drive an android phone via `adb` using 
 - Type text
 - Touch and Swipe input
 - Launch apps
-
-> Preview: https://cdn.micartey.dev/preview/video/aHR0cHM6Ly9jZG4ubWljYXJ0ZXkuZGV2L2FwaS92MS9zdHJlYW0vYmxvYi9BbmRyb2lkTUNQLm1vdg==
 
 ## Setup
 
