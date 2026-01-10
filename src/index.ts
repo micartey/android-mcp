@@ -39,7 +39,7 @@ server.setRequestHandler(ListToolsRequestSchema, async () => {
       {
         name: "take_screenshot",
         description:
-          "Takes a screenshot of the Android device and saves it to screenshot.png",
+          "Takes a screenshot of the Android device and returns it as a PNG image",
         inputSchema: {
           type: "object",
           properties: {},
@@ -182,12 +182,13 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
   try {
     switch (name) {
       case "take_screenshot": {
-        runAdb("exec-out screencap -p > screenshot.png");
+        const screenshot = execSync("adb exec-out screencap -p");
         return {
           content: [
             {
-              type: "text",
-              text: "Screenshot saved to screenshot.png",
+              type: "image",
+              data: screenshot.toString("base64"),
+              mimeType: "image/png",
             },
           ],
         };
