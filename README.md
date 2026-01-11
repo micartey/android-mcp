@@ -26,7 +26,10 @@ This repository is a proof-of-concept to drive an android phone via `adb` using 
 The setup is fairly easy given you have already an connected device and created an `adb` session.
 
 ```bash
-nix develop
+nix run github:micartey/android-mcp
+
+# Or if you have cloned the repository, you can run:
+nix develop .#mcp
 ```
 
 Afterward, you have to configure the mcp server in your tool of choice.
