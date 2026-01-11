@@ -1,0 +1,7 @@
+# Lefthook configuration
+# https://github.com/evilmartians/lefthook
+
+pre-commit:
+  commands:
+    nix-build:
+      run: nix build .#android-mcp --no-link

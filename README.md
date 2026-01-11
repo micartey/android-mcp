@@ -26,7 +26,7 @@ This repository is a proof-of-concept to drive an android phone via `adb` using 
 The setup is fairly easy given you have already an connected device and created an `adb` session.
 
 ```bash
-nix develop .#mcp
+nix develop
 ```
 
 Afterward, you have to configure the mcp server in your tool of choice.
@@ -88,5 +88,5 @@ just vm-silent
 Then you will need to run a slightly different command as this will also take care of connecting via adb
 
 ```bash
-nix develop
+nix develop .#vm
 ```
