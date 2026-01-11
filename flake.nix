@@ -46,7 +46,7 @@
         packages.android-mcp = android-mcp;
         packages.default = android-mcp;
 
-        devShells.default = pkgs.mkShell {
+        devShells.mcp = pkgs.mkShell {
           buildInputs = with pkgs; [
             nodejs
             bun
@@ -63,7 +63,7 @@
           '';
         };
 
-        devShells.vm = pkgs.mkShell {
+        devShells.default = pkgs.mkShell {
           buildInputs = with pkgs; [
             just
 
